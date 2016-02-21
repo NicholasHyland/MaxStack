@@ -1,0 +1,19 @@
+Part 1:
+
+Runtime of equalLists() is O(N), because the runtime is dependent on the length of the smaller of the two lists,
+so if there 10 items in the smallest list, it will take 10 times as long if the smallest list only had 1 item.
+
+Part 2:
+
+Runtime of terminates() is O(N), because this algorithm also depends on the length of the list, such that it will take
+5 times longer to find out if a list with 5 elements is recursive compared to a list with 1 element
+
+Part 3:
+
+SlowMaxStack - Runtime of getMaxSoFar() is O(N), because it has to go through every element in the list each time to
+determine the max value. Runtime of push() and pop() are both constant because we are only ever accessing the top of the list to add
+or remove one single item
+
+FastMaxStack - Runtime of getMaxSoFar() is constant, because it accesses the maximum value which is located in helper.info and doesn't
+have to go through the entire original list. Runtime of push() and pop() are both constant because we are only ever adding or 
+removing one item from/to the top of the list
